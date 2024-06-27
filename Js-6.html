@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-6</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body><center style="padding: 25px;">
+    <div style="border-style: ridge; width: 270px; height: 190px; padding-bottom: 35%; background-color:rgb(238, 238, 238); box-shadow: 5px 5px rgb(233, 232, 232);">
+        <h1 style="font-style: italic; font-family:Georgia, 'Times New Roman', Times, serif;"> Instagram</h1>
+        <div>
+            <p>
+                <span class="glyphicon" style="border-style:ridge ; padding: 3px; border-top-left-radius: 7px; border-bottom-left-radius: 7px;">&#xe008;</span>
+            <input type="text" id="demo1" placeholder="Username">  
+        
+        </p> 
+        <p><span class="glyphicon glyphicon-lock" style="border-style:ridge; padding: 4px; border-top-left-radius: 7px; border-bottom-left-radius: 7px;"></span>
+        <input type="password" id="demo" placeholder="Password" >
+        </p> </div>
+        <button class="btn" style="background-color: blue; color: white; width: 210px;" onclick="f2();f1()"> Log in </button><br><br>
+
+    <input type="checkbox"><span style="font-style:italic; font-family: Times;">Remember</span> <a href="/" style="padding-left: 33px;"><span style="font-family: Gill Sans;"> Forgot Password?</span> </a>   
+    </div><p style="font-family: Gill Sans; padding: 20px;">Don't have an account<a href="/"> Sign up here</a></p>
+
+
+    
+    </center>
+
+    <script>
+
+        function f1(){
+
+     
+var x = document.getElementById('demo').value;
+var count = x.length
+
+if(count<7){
+    window.alert("password needed to be more than 8 character")
+}
+     }  
+     
+     function f2(){
+
+     
+var y = document.getElementById('demo1').value;
+
+
+if(y==""){
+    window.alert("User Id cannot be empty")
+}
+     }  
+     
+
+     </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-5</title>
+</head>
+<body>    Name:<input type="text" id="demo" onclick="setTimeout(getting,1000)"placeholder="Name" >
+<span id="demo1" style="color: red;"></span>
+<br>
+<br>
+Email:<input type="text" id="mail" onclick="setTimeout(mety,1000)" placeholder="Email" >
+<span id="empty" style="color: red;"> </span>
+
+<br>
+<br>
+  
+ Website:<input type="text" id="Website" onclick="setTimeout(site,1000)" placeholder="Website" > 
+ <span id="open" style="color: red;"> </span>
+  <br><br>
+  <table>
+
+  <tr>
+ <td>Message:</td>
+ <td><textarea cols="35" rows="5" id="Message" onclick="setTimeout(mite,1000)" title="Message"></textarea></td>
+ 
+ 
+ <td><span id="zero" style="color: red;"> </span> </td>
+ </tr>
+</table>
+ <br>
+ <br>
+<input type="button" value="Submit" onclick="getting(); mety() ;site(); mite()">
+  <script>
+
+function getting(){
+    var x = document.getElementById('demo').value
+
+    if(x=="")
+    {
+     
+document.getElementById('demo1').innerHTML='This field is requied'
+document.getElementById('demo').style.borderColor="red";
+
+
+    }
+}
+
+function mety(){
+    var y = document.getElementById('mail').value
+
+    if(y==""){
+    document.getElementById('mail').style.borderColor="red"
+    document.getElementById('empty').innerHTML='A valid email address is required'
+}
+}
+
+function site(){
+    var z = document.getElementById('Website').value
+
+    if(z==""){
+        document.getElementById('Website').style.borderColor="red"
+    document.getElementById('open').innerHTML='A valid url is required'
+
+    }
+}
+    function mite()
+    {
+        var a = document.getElementById('Message').value
+
+         if(a=="")
+         {
+            document.getElementById("Message").style.borderColor="red"
+    document.getElementById("zero").innerHTML='This field is  required'
+
+      }
+    }
+
+
+    </script>
+</body>
+</html>

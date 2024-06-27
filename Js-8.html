@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Registration.css">
+    <title> Registration </title>
+</head>
+<body>
+    <div  style="background-color: color-mix(in HSL, darkorange 50%, white);">
+    <center><table  style="border-spacing: 0px;">
+        <h2 style="color: blue;"> <center>Registration Form</center></h2>
+        <tr>
+    <th style="padding: 10px;">FirstName </th>
+<td> <input  size="53"  type="text" id="F1" onclick="setTimeout(f1,1000)">  </td>
+<td><span id="F2" style="color:red; font-weight: bold;""></span></td>
+</tr>
+
+    <tr> 
+        <th style="padding: 10px;" >LastName</th>
+        <td> <input size="53"   type="text"id="L1" onclick="setTimeout(f2,1000)"> </td>
+        <td><span id="L2" style="color: red; font-weight: bold;"></span></td>
+    </tr>
+        <tr> 
+            <th style="padding: 10px;">Email</th>
+            <td><input size="53"type="email" id="E1" onclick="setTimeout(f3,1000)">  </td>
+            <td><span id="E2" style="color: red; font-weight: bold;"></span></td>
+        </tr>
+            <tr>
+                <th style="padding: 10px;" >Password</th>
+                <td><input size="53"  type="password" id="P1" onclick="setTimeout(f4,3000)">  </td>
+                <td><span id="P2" style="color: red; font-weight: bold;"></span></td>
+            </tr>
+                <tr style="padding: 10px;"> 
+                    <th>Re-enter Password</th>
+                    <td><input size="53"   type="password" id="R1" onclick="setTimeout(f5,3000)">    </td>
+                    <td><span id="R2" style="color: red; font-weight: bold;"></span></td>
+                </tr>
+        
+           <tr>
+    <th style="padding: 10px;">Gender:</th>
+    
+            <td><input type="radio"> Male
+                <hr> <input size="53"   type="radio"> Female</hr>
+            </td></tr>
+  
+
+    <tr> 
+        <th style="padding: 10px;">Age:</th>
+        <td><input size="53" type="tel" id="A1" onclick="setTimeout(f6,1000)"> </td>
+        <td><span id="A2" style="color: red; font-weight: bold;"></span></td>
+    </tr>
+    <tr><th style="padding: 10px;">Phone Number:</th>
+        <td><input size="53"   type="tel" id="PH1" onclick="setTimeout(f7,1000)">   </td>
+        <td><span id="PH2" style="color: red; font-weight: bold;"> </span></td>
+    </tr>
+    <tr><th style="padding: 10px;">Address:</th>
+        <td><textarea name="Address" rows="4" cols="50" id="AD1" onclick="setTimeout(f8,1000)"></textarea>   </td>
+    <td><span id="AD2" style="color: red; font-weight: bold;"> </span></td>
+    </tr>
+    <tr> <th style="padding: 10px;">State:</th>
+        <td><input size="53" type="text" id="S1" onclick="setTimeout(f9,1000)">   </td>
+        <td><span id="S2" style="color: red; font-weight: bold;"></span></td>
+    </tr>
+    <tr>  <th style="padding: 10px;">Country</th>
+      
+     <td>   
+        
+ <select>
+    <option value=""> Choose a Country</option>
+    <option value="">India</option>
+    <option value="">USA</option>
+    <option value="">UK</option>
+    <option value="">Germany</option>
+    <option value="">Australia</option>
+ </select>
+    </td></tr>
+    
+    <th style="padding: 10px;">Language known</th>
+    
+    <td> <input type="checkbox">English
+     <input type="checkbox">Karanataka
+     <input type="checkbox">Hindi
+     <input type="checkbox">Telugu
+
+    <tr><td colspan="2"> <input type="checkbox"> Hereby i declare all the given details are true</td></tr>
+   <tr><td style="text-align: right;" colspan="2"> Log  in to <a href="https://ethnus.com">Ethnus</a> website</td></tr> 
+  </table> </center></br>
+  <center><button style="background-color: orangered; border-radius: 30%; font-weight: bold;color: white;" onclick="f1();f2();f3();f4();f5();f6();f7();f8();f9()">Register</button></center>
+</div>
+
+<script>
+    function f1(){
+        var a = document.getElementById('F1').value
+
+        if(a==""){
+            document.getElementById('F2').innerHTML='Poor';
+        }
+    }
+
+    function f2(){
+        var b = document.getElementById('L1').value
+
+        if(b==""){
+            document.getElementById('L2').innerHTML='Poor';
+        }
+    }
+
+    function f3(){
+        var c = document.getElementById('E1').value
+
+        if(c==""){
+            document.getElementById('E2').innerHTML='Poor';
+        }
+    }
+
+    function f4(){
+        var d = document.getElementById('P1').value
+ var count1= d.length;
+console.log(count1)
+        if(count1>8){
+            document.getElementById('P2').innerHTML='Good';
+        }
+        
+
+else{
+    document.getElementById('P2').innerHTML='Worst';
+}
+}
+
+    function f5(){
+        var e = document.getElementById('R1').value
+        var count= e.length;
+        console.log(count)
+        if(count>8){
+            document.getElementById('R2').innerHTML='Good';
+        }
+
+else{
+    document.getElementById('R2').innerHTML='Worst';
+}
+    }
+
+    function f6(){
+        var f = document.getElementById('A1').value
+
+        if(f==""){
+            document.getElementById('A2').innerHTML='Poor';
+        }
+    }
+
+    function f7(){
+        var g = document.getElementById('PH1').value
+
+        if(g==""){
+            document.getElementById('PH2').innerHTML='Poor';
+        }
+    }
+
+    function f8(){
+        var h = document.getElementById('AD1').value
+
+        if(h==""){
+            document.getElementById('AD2').innerHTML='Poor';
+        }
+    }
+
+    function f9(){
+        var i = document.getElementById('S1').value
+
+        if(i==""){
+            document.getElementById('S2').innerHTML='Poor';
+        }
+    }
+</script>
+</body>
+</html>
